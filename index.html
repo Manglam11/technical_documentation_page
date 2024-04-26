@@ -31,12 +31,12 @@
           </li>
         </ul>
         <code>
-          mport React from 'react'; const MyNextComponent = () => { return (
-          <div>
-            <h1>Hello Next.js!</h1>
-            <p>This is a basic Next.js component.</p>
-          </div>
-          ); }; export default MyNextComponent;
+          import React from 'react'; <br />
+          const MyNextComponent = () => {<br />
+          return (Hello Next.js! ); <br />
+          }; <br />
+          <br />
+          export default MyNextComponent;<br />
         </code>
       </section>
       <section class="main-section" id="fastApi">
@@ -69,15 +69,17 @@
           </li>
         </ul>
         <code>
-          rom fastapi import FastAPI from fastapi.responses import HTMLResponse
-          app = FastAPI() # Sample data fake_items_db = [{"item_name": "apple"},
-          {"item_name": "banana"}, {"item_name": "orange"}] # Endpoint to return
-          items as HTML @app.get("/", response_class=HTMLResponse) async def
-          read_items(): items_html = "
-          <h1>Available Items:</h1>
-          " for item in fake_items_db: items_html += f"
-          <p>{item['item_name']}</p>
-          " return HTMLResponse(content=items_html)
+          from fastapi import FastAPI <br />from fastapi.responses import
+          HTMLResponse<br />
+          app = FastAPI() <br /># Sample data <br />fake_items_db =
+          <br />[{"item_name": "apple"},<br />
+          {"item_name": "banana"},<br />
+          {"item_name": "orange"}] <br /># Endpoint to return items as HTML
+          <br />@app.get("/", response_class=HTMLResponse) <br />async def
+          read_items(): items_html = " : " for item in fake_items_db: items_html
+          += f" "<br />
+
+          return HTMLResponse(content=items_html)
         </code>
       </section>
       <section class="main-section" id="pyTorch">
@@ -93,11 +95,11 @@
           efficient automation of common tasks.
         </p>
         <code>
-          # Define a simple neural network class LinearModel(nn.Module): def
-          __init__(self): super(LinearModel, self).__init__() self.fc =
-          nn.Linear(1, 1) # Input dimension: 1, Output dimension: 1 def
-          forward(self, x): return self.fc(x) # Instantiate the model model =
-          LinearModel()
+          # Define a simple neural network class <br />LinearModel(nn.Module):
+          def __init__(self): super(LinearModel, self).__init__() <br />self.fc
+          = nn.Linear(1, 1) <br /># Input dimension: 1, Output dimension: 1
+          <br />def forward(self, x): return self.fc(x) <br /># Instantiate the
+          model <br />model = LinearModel()
         </code>
       </section>
       <section class="main-section" id="terraform">
@@ -129,8 +131,8 @@
           </li>
         </ul>
         <code>
-          # Configure the AWS provider provider "aws" { region = "us-west-2" #
-          Specify your desired AWS region }
+          # Configure the AWS provider provider <br />"aws" { region =
+          "us-west-2" <br /># Specify your desired AWS region <br /><br />}
         </code>
       </section>
       <section class="main-section" id="kubernetes">
@@ -151,11 +153,16 @@
           configuration while monitoring application health.
         </p>
         <code>
-          # Define a Kubernetes deployment resource "kubernetes_deployment"
-          "example_deployment" { metadata { name = "example-deployment" labels =
-          { app = "example" } } }
+          # Define a Kubernetes deployment resource
+          <br />"kubernetes_deployment" "example_deployment" { <br />metadata {
+          <br />name = "example-deployment" labels = { <br />app = "example" }
+          <br />} }
         </code>
       </section>
+      <footer>
+        <p>Copyright © 2024 Manglam. All rights reserved.</p>
+        <p>Designed and developed with ❤️ by Manglam</p>
+      </footer>
     </main>
   </body>
 </html>
