@@ -41,15 +41,120 @@
       </section>
       <section class="main-section" id="fastApi">
         <header>FastAPI</header>
+        <p>
+          FastAPI is a web framework for building RESTful APIs with Python 3.8+.
+          It's based on Pydantic and uses type hints to validate, serialize, and
+          deserialize data. FastAPI is known for its speed, ease of use, and
+          detailed documentation
+        </p>
+        <p>Here are some features of FastAPI:</p>
+        <ul>
+          <li>Editor support: Completion, type checks, and data validation</li>
+          <li>
+            Automatic documentation: Interactive documentation with Swagger UI
+            and ReDoc
+          </li>
+          <li>
+            Data conversion: Automatically convert input data from the network
+            to Python data types
+          </li>
+          <li>Validation: Automatic and clear errors when data is invalid</li>
+          <li>
+            Type hints: Type hint your code to get free data validation and
+            conversion
+          </li>
+          <li>
+            Dependency injection: Create plugins easily using dependency
+            injection
+          </li>
+        </ul>
+        <code>
+          rom fastapi import FastAPI from fastapi.responses import HTMLResponse
+          app = FastAPI() # Sample data fake_items_db = [{"item_name": "apple"},
+          {"item_name": "banana"}, {"item_name": "orange"}] # Endpoint to return
+          items as HTML @app.get("/", response_class=HTMLResponse) async def
+          read_items(): items_html = "
+          <h1>Available Items:</h1>
+          " for item in fake_items_db: items_html += f"
+          <p>{item['item_name']}</p>
+          " return HTMLResponse(content=items_html)
+        </code>
       </section>
       <section class="main-section" id="pyTorch">
         <header>PyTorch</header>
+        <p>
+          PyTorch Lightning organizes PyTorch code to remove boilerplate and
+          unlock scalability. It allows users to try any ideas using raw PyTorch
+          without the boilerplate, and enables reproducibility and better
+          readability.
+        </p>
+        <p>
+          It also allows for simple multi-GPU training, built-in testing, and
+          efficient automation of common tasks.
+        </p>
+        <code>
+          # Define a simple neural network class LinearModel(nn.Module): def
+          __init__(self): super(LinearModel, self).__init__() self.fc =
+          nn.Linear(1, 1) # Input dimension: 1, Output dimension: 1 def
+          forward(self, x): return self.fc(x) # Instantiate the model model =
+          LinearModel()
+        </code>
       </section>
       <section class="main-section" id="terraform">
         <header>Terraform</header>
+        <p>
+          Terraform is an infrastructure-as-code (IaC) tool that allows users to
+          create, update, and version their cloud and on-premises resources. It
+          can automate and manage infrastructure-as-a-service (IaaS),
+          platform-as-a-service (PaaS), or software-as-a-service (SaaS) level
+          capabilities. Terraform works by creating and managing resources on
+          cloud platforms and other services through their application
+          programming interfaces (APIs).
+        </p>
+        <p>Terraform can be used to:</p>
+        <ul>
+          <li>
+            Manage Kubernetes clusters on AWS, Microsoft Azure, or Google Cloud
+          </li>
+          <li>
+            MAutomate key networking tasks like updating load balancer target
+            pools or applying firewall policies
+          </li>
+          <li>
+            Manage low-level components like compute, storage, and networking
+            resources
+          </li>
+          <li>
+            Manage high-level components like DNS entries and SaaS features
+          </li>
+        </ul>
+        <code>
+          # Configure the AWS provider provider "aws" { region = "us-west-2" #
+          Specify your desired AWS region }
+        </code>
       </section>
       <section class="main-section" id="kubernetes">
         <header>Kubernetes</header>
+        <p>
+          Kubernetes (k8s or kube) is an open-source system for managing and
+          automating the deployment, scaling, and management of containerized
+          applications. It was originally developed at Google and released in
+          2014.
+        </p>
+        <p>
+          Kubernetes helps to manage the complexity of operating applications
+          that span multiple containers deployed across multiple servers. It
+          provides an open-source API that controls how and where containers
+          will run. Kubernetes groups containers into logical units for easy
+          management and discovery. It also features automated rollouts and
+          rollbacks that progressively roll out changes to an application or its
+          configuration while monitoring application health.
+        </p>
+        <code>
+          # Define a Kubernetes deployment resource "kubernetes_deployment"
+          "example_deployment" { metadata { name = "example-deployment" labels =
+          { app = "example" } } }
+        </code>
       </section>
     </main>
   </body>
